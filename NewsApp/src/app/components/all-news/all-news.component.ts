@@ -43,14 +43,6 @@ country:"us"
      this.articles=response;
      console.log(this.articles)
 
-
-
-
-
-
-
-
-
     }
   )
 }

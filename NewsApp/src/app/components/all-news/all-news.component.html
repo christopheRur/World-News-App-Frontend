@@ -1,158 +1,54 @@
-
 <nav>
-
-  <tr> <td>{{"World News"}}</td></tr>
-  </nav>
-  <div class="container">
-
-  <table >
-
-
-  <tbody *ngFor="let artc of articles">
-
-    <td>
-        <h1>{{artc.title}}</h1>
-        <tr><p id="author-id"> Source: {{artc.source.name}}</p></tr>
   <tr>
-    <td class="innerData">
-    <div >
-      <img src={{artc.urlToImage}} alt="img coming soon" class=container-image>
-    </div>
-  <div>
-
-  <p>
-    {{ artc.content}} <br>
-    <br><br>
-    {{artc.description}}
-  </p>
-
-
-
-  <a href={{url}}>More Info</a>
-
-  <tr><p id="author-id">Author:{{author}}</p>  </tr>
-  <tr><p id="author-id"> published At: {{publishedAt}}</p></tr>
-
-
-
-  </div>
-
-  </td>
-
+    <td>{{ "World News" }}</td>
+    <td>
+      <label for="passenger"> Country </label>
+      <select name="passengerCount" id="passenger" >
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+    </td>
   </tr>
-  </td>
-  <!--  -->
+</nav>
+<div class="container">
+  <table>
+    <tbody *ngFor="let artc of articles">
+      <td>
+        <h1>{{ artc.title }}</h1>
+        <tr>
+          <p id="author-id">Source: {{ artc.source.name }}</p>
+        </tr>
+        <tr>
+          <td class="innerData">
+            <div>
+              <img
+                src="{{ artc.urlToImage }}"
+                alt="img coming soon"
+                class="container-image"
+              />
+            </div>
+            <div>
+              <p>
+                {{ artc.content }} <br />
+                <br /><br />
+                {{ artc.description }}
+              </p>
 
-  <td>
-    <h1>{{artc.title}}</h1>
-    <tr><p id="author-id"> Source: {{"source.name"}}</p></tr>
-    <tr>
-      <td class="innerData">
-        <p>
-         {{ content}} <br>
-          <br>
-        </p>
+              <a href="{{ url }}">More Info</a>
 
-
-
-      <div >
-        <img src="" alt="img coming soon" class=container2-image>
-      </div>
-      <p>
-
-        {{ "US House chaoChina space station Overhead aircraft binsmSimone BilesBig catsHalloween warning Solo sleeping pods Greatest F1 car Israel Defense Forces declare state of war alert"}} <br>
-
-      </p>
-
-      <a href="url">hh</a>
-
-      <tr><p id="author-id">Author:{{"   AUTHOR "}}</p>  </tr>
-      <tr><p id="author-id"> published At: {{"   publised"}}</p></tr>
-
-    <div>
-
-    </div>
-
-    </td>
-
-    </tr>
-  </td>
-
-  <!--  -->
-
-  <!--  -->
-
-  <td>
-    <h1>{{"Title"}}</h1>
-    <tr><p id="author-id"> Source: {{"   ABC News"}}</p></tr>
-    <tr>
-      <td class="innerData">
-        <p>
-          {{
-          "US House chaoChina space station Overhead aircraft binsmSimone BilesBig catsHalloween warning Solo sleeping pods Greatest F1 car Israel Defense Forces declare state of war alert"}} <br>
-        </p>
-
-
-
-      <div >
-        <img src="https://www.usatoday.com/gcdn/presto/2022/11/15/USAT/b4ee0749-1fc7-4963-8e9d-43d29fe1a0d7-AP_Trump_Immigration.JPG?crop=4201,2363,x0,y0&width=3200&height=1800&format=pjpg&auto=webp" alt="img coming soon" class=container-image>
-      </div>
-      <p>
-
-        {{"description"}}
-      </p>
-
-      <a href="url">hh</a>
-
-      <tr><p id="author-id">Author:{{"   AUTHOR "}}</p>  </tr>
-      <tr><p id="author-id"> published At: {{"   publised"}}</p></tr>
-
-    <div>
-
-
-    </div>
-
-    </td>
-
-    </tr>
-  </td>
-
-  <!--  -->
-
-  <td>
-    <h1 class="title">{{"Title"}}</h1>
-    <tr><p id="author-id"> Source: {{"   ABC News"}}</p></tr>
-    <tr>
-      <td class="innerData">
-        <p>
-          {{ "US House chaoChina space station Overhead aircraft binsmSimone BilesBig catsHalloween warning Solo sleeping pods Greatest F1 car Israel Defense Forces declare state of war alert"}} <br>
-          <br>
-        </p>
-
-
-
-      <div >
-        <img src="https://www.usatoday.com/gcdn/presto/2022/11/15/USAT/b4ee0749-1fc7-4963-8e9d-43d29fe1a0d7-AP_Trump_Immigration.JPG?crop=4201,2363,x0,y0&width=3200&height=1800&format=pjpg&auto=webp" alt="img coming soon" class=container2-image>
-      </div>
-      <p>
-
-        {{"description"}}
-      </p>
-
-      <a href="url">hh</a>
-      <tr><p id="author-id">Author:{{"   AUTHOR "}}</p>  </tr>
-      <tr><p id="author-id"> published At: {{"   publised"}}</p></tr>
-    <div>
-
-    </div>
-
-    </td>
-
-    </tr>
-  </td>
-
-  </tbody>
-
+              <tr>
+                <p id="author-id">Author:{{ author }}</p>
+              </tr>
+              <tr>
+                <p id="author-id">published At: {{ publishedAt }}</p>
+              </tr>
+            </div>
+          </td>
+        </tr>
+      </td>
+      <!--  -->
+    </tbody>
   </table>
-
-  </div>
+</div>
