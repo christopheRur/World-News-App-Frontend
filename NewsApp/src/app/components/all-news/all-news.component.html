@@ -3,7 +3,7 @@
     <td>{{ "World News" }}</td>
     <td>
       <label for="passenger"> Country </label>
-      <select name="passengerCount" id="passenger" >
+      <select name="passengerCount" id="passenger"  >
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -36,13 +36,13 @@
                 {{ artc.description }}
               </p>
 
-              <a href="{{ url }}">More Info</a>
+              <a href="{{artc.url }}">More Info</a>
 
               <tr>
-                <p id="author-id">Author:{{ author }}</p>
+                <p id="author-id">Author:{{ artc.author }}</p>
               </tr>
               <tr>
-                <p id="author-id">published At: {{ publishedAt }}</p>
+                <p id="author-id">published At: {{ artc.publishedAt }}</p>
               </tr>
             </div>
           </td>

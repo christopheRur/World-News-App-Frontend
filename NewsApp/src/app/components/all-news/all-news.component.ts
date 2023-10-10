@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Article } from 'src/app/Articles';
+import { Article } from 'src/app/articles';
+
 
 import { news } from 'src/app/news';
 import { NewsService } from 'src/app/news.service';
@@ -11,10 +12,23 @@ import { NewsService } from 'src/app/news.service';
 })
 export class AllNewsComponent implements OnInit {
 
+  private countryNews={
+    country:""
+      }
+
   constructor(private newsService:NewsService) { }
 
   ngOnInit(): void {
-    this.getWorldNews();
+    var contN={
+      country:"us"
+        }
+    if(this.countryNews.country.length===0){
+      this.getWorldNews(contN);
+    }
+    else{
+
+    this.getWorldNews(this.countryNews);
+  }
   }
   articles: Article[] = [];
 
@@ -30,11 +44,9 @@ export class AllNewsComponent implements OnInit {
   publishedAt!: string;
   content?: string;
 
-public getWorldNews():void{
+public getWorldNews(countNews:any):void{
 
-  let countNews={
-country:"us"
-  }
+
 
   this.newsService.retrieveNews(countNews).subscribe(
     (response: Article[])=>{
@@ -46,6 +58,13 @@ country:"us"
     }
   )
 }
+
+public selecCountry(country:string):void{
+  this.countryNews.country=country;
+this.getWorldNews(this.countryNews)
+
+}
+
 }
 
 
