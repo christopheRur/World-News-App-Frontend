@@ -58,3 +58,28 @@ box-shadow: 10px yellowgreen;
 h1{
   color:rgb(189, 184, 184)
 }
+
+select{
+background-color: black;
+color: white;
+}
+
+select option{
+  background-color: yellow;
+  color: white;
+}
+
+select::-moz-focus-inner{
+  border: 0;
+}
+#tit_na{
+  padding-right:300px;
+  padding-left:-200px;
+  display: inline;
+  margin: 10px;
+
+}
+button{
+  background-color: rgb(248, 108, 108);
+  box-shadow: 100px;
+}

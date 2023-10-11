@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Article } from 'src/app/articles';
+import { Location } from '@angular/common';
 
 
 import { news } from 'src/app/news';
@@ -15,8 +16,10 @@ export class AllNewsComponent implements OnInit {
   private countryNews={
     country:""
       }
+      country!:string;
 
-  constructor(private newsService:NewsService) { }
+
+  constructor(private newsService:NewsService, private location: Location) { }
 
   ngOnInit(): void {
     var contN={
@@ -59,9 +62,11 @@ public getWorldNews(countNews:any):void{
   )
 }
 
-public selecCountry(country:string):void{
-  this.countryNews.country=country;
-this.getWorldNews(this.countryNews)
+public selecCountry():void{
+
+console.log("====>"+this.country)
+  this.countryNews.country=this.country;
+this.getWorldNews(this.countryNews);
 
 }
 
