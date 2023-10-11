@@ -66,6 +66,7 @@ public selecCountry():void{
 
 console.log("====>"+this.country)
   this.countryNews.country=this.country;
+
 this.getWorldNews(this.countryNews);
 
 }

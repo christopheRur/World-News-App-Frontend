@@ -61,7 +61,7 @@
 
       </select>
     </td>
-    <td id="tit_na" style="color: brown;">{{country.toUpperCase()}}</td>
+    <td id="tit_na" style="color: brown;">{{country}}</td>
   </tr>
 </nav>
 <div class="container">
@@ -76,9 +76,10 @@
           <td class="innerData">
             <div>
               <img
-                src="{{ artc.urlToImage }}"
-                alt="img coming soon"
-                class="container-image"
+              src="{{ artc.urlToImage }}"
+              onerror="this.src = 'assets/news.png'"
+              alt="News Image"
+              class="container-image"
               />
             </div>
             <div>
@@ -100,7 +101,6 @@
           </td>
         </tr>
       </td>
-      <!--  -->
     </tbody>
   </table>
 </div>
